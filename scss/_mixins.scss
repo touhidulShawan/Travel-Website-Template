@@ -1,0 +1,17 @@
+@mixin navLinkStyle {
+  a:hover {
+    color: $primary-color;
+  }
+  a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    border-bottom: 2px solid $blue-chill;
+    margin: 0 auto;
+    transition: 0.3s width;
+  }
+  a:hover::after {
+    width: 100%;
+  }
+}
